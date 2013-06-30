@@ -1,0 +1,26 @@
+<html>
+    <head>
+	<title> TEST FRAMEWORK </title>				
+	<script type="text/javascript">
+	    function assert(value, desc) {
+		var li = document.createElement("li");
+		li.className = value ? "pass" : "fail";
+		li.appendChild(document.createTextNode(desc));
+		document.getElementById("results").appendChild(li);
+	    }
+	    
+	    function loadTestCases() {
+		assert(true, "Unit cases are running...");
+		assert(false, "Something went horribly wrong!");
+	    }
+	</script>
+	    
+	<style>
+	    #results li.pass { color: green; }
+	    #results li.fail { color: red; }
+	</style>
+	
+	<body onload="loadTestCases();">
+	    <ul id="results"></ul>
+	</body>
+    </head>
